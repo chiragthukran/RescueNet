@@ -9,6 +9,7 @@ fi
 
 # Run migrations and seed data
 php artisan migrate --force
+php artisan db:seed --force
 
 # Cache configuration
 php artisan config:cache
