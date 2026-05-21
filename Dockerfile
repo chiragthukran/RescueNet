@@ -37,8 +37,8 @@ RUN npm install && npm run build
 COPY docker/nginx.conf /etc/nginx/sites-enabled/default
 
 # Set permissions
-RUN chown -R www-data:www-data /var/www/storage /var/www/bootstrap/cache
-RUN chmod -R 775 /var/www/storage /var/www/bootstrap/cache
+RUN chown -R www-data:www-data /var/www/storage /var/www/bootstrap/cache /var/www/database
+RUN chmod -R 775 /var/www/storage /var/www/bootstrap/cache /var/www/database
 
 # Copy start script
 COPY docker/start.sh /usr/local/bin/start.sh
